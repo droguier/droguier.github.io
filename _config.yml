@@ -4,13 +4,14 @@
 # site settings
 locale                   : "es-ES"
 title                    : "Droguier"
+tab_subtitle                    : "'s return ver 3.0"
 title_separator          : "-"
 name                     : &name "Daniel Andres Leiva"
 subtitle                 : "'s Web"
 email                    : &email "daniel.leiva@ceinf.cl"
 description              : &description "Probando un nuevo bootstrap para Jekyll, version de implementación 3.0"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
-url                      : "https://mmistakes.github.io" #http://droguier.me # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : # the subpath of your site, e.g. "/blog"
+url                      : "https://droguier.github.io"
 author                   : "Droguier"
 street_address           : "Santiago"
 city                     : "Santiago"
@@ -28,8 +29,6 @@ facebook:
   app_id                 :
   publisher              :
 og_image                 : "site-logo.png" # Open Graph/Twitter default site image
-# For specifying social profiles
-# - https://developers.google.com/structured-data/customize/social-profiles
 social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
@@ -69,20 +68,21 @@ author:
   youtube          :
 
 # homepage tiles
-tiles-source: posts # accepts "posts" or "pages"
-tiles-count: 6
+tiles-source      : posts # accepts "posts" or "pages"
+pages-sources     : pages
+tiles-count       : 6
 
 # social settings
-500px_url:
-facebook_url:
-github_url:
-gitlab_url: https://gitlab.com/u/andrewbanchich
-googleplus_url: https://plus.google.com/u/0/+AndrewBanchich
-instagram_url: https://instagram.com
-linkedin_url: https://www.linkedin.com/in/
-pinterest_url:
-slack_url:
-twitter_url        : *twitter
+500px_url         :
+facebook_url      :
+github_url        :
+gitlab_url        :
+googleplus_url    : "https://plus.google.com/u/0/+DanieLinLeiva"
+instagram_url     :
+linkedin_url      : "https://www.linkedin.com/in/droguier/"
+pinterest_url     :
+slack_url         :
+twitter_url       : *twitter
 
 # build settings
 markdown: kramdown
