@@ -70,7 +70,7 @@ author:
 # homepage tiles
 tiles-source      : posts # accepts "posts" or "pages"
 pages-sources     : pages
-tiles-count       : 6
+tiles-count       : 4
 
 # social settings
 500px_url         :
