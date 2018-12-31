@@ -72,10 +72,10 @@
 				display: block;
 				height: 100%;
 				left: 0;
-				opacity: 0.85;
+				opacity: 0.45;
 				position: absolute;
 				width: 100%;
-				z-index: 2;
+				z-index: 3;
 			}
 
 			&:after {
@@ -102,9 +102,13 @@
 				opacity: 0;
 			}
 
-			&:nth-child(4n - 1),
-			&:nth-child(4n - 2) {
-				width: 60%;
+            &:nth-child(n){
+                width: 30%;
+            }
+
+			&:nth-child(6n - 5  ),
+			&:nth-child(6n) {
+				width: 40%;
 			}
 
 			&:nth-child(6n - 5) {

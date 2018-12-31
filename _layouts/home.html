@@ -16,13 +16,13 @@
     <section id="banner" class="major">
         <div class="inner">
             <header class="major">
-                <h1>{{ page.landing-title }}</h1>
+                <h1>{{ page.image_tittle }}</h1>
             </header>
             <div class="content">
-                <p style="text-transform: uppercase;">{{ site.description }}</p>
-                <ul class="actions">
-                    <li><a href="#one" class="button next scrolly">Get Started</a></li>
-                </ul>
+                <p style="text-transform: uppercase;">{{ page.image_name_author }}</p>
+                <!--ul class="actions">
+                    <li><a href="{{ page.image_author_web }}" class="button next">Página del Artista</a></li>
+                </ul-->
             </div>
         </div>
     </section>
@@ -37,7 +37,7 @@
         <section id="two">
             <div class="inner">
                 <header class="major">
-                    <h2>Droguier's test!</h2>
+                    <h2>{{ site.description }}</h2>
                 </header>
                 <p>{{ content }}</p>
                 <ul class="actions">
