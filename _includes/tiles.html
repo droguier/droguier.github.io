@@ -9,7 +9,7 @@
         </header>
     </article>
     <article>
-        <span class="image" style="background: #ff0014">
+        <span class="image">
                 <img src="assets/images/home/backgroud_youtube.png" alt="" />
         </span>
         <header class="major">
@@ -29,8 +29,8 @@
                     </header>
             </article>
         {% endif %}
-        {% endfor %}
-        {% for page in site.pages limit:site.tiles-count %}
+    {% endfor %}
+    {% for page in site.pages limit:site.tiles-count %}
         {% if site.tiles-source == 'pages' %}
             <article>
                     <span class="image">

@@ -4,12 +4,12 @@
 # site settings
 locale                   : "es-ES"
 title                    : "Droguier"
-tab_subtitle                    : "'s return ver 3.0"
+tab_subtitle                    : "'s return ver 4.1"
 title_separator          : "-"
 name                     : &name "Daniel Andres Leiva"
 subtitle                 : "'s Web"
 email                    : &email "daniel.leiva@ceinf.cl"
-description              : &description "Probando un nuevo bootstrap para Jekyll, version de implementación 3.0"
+description              : &description "Mi no tan personal pagina web!"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 url                      : "https://droguier.github.io"
 author                   : "Droguier"
@@ -19,7 +19,6 @@ state                    : "CL"
 zip_code                 : "1234567"
 country                  : "Chile"
 phone                    : "(+56) 9-4177-4655"
-
 
 ### Social Sharing
 twitter:
@@ -67,11 +66,6 @@ author:
   xing             :
   youtube          :
 
-# homepage tiles
-tiles-source      : posts # accepts "posts" or "pages"
-pages-sources     : pages
-tiles-count       : 4
-
 # social settings
 500px_url         :
 facebook_url      :
@@ -83,6 +77,32 @@ linkedin_url      : "https://www.linkedin.com/in/droguier/"
 pinterest_url     :
 slack_url         :
 twitter_url       : *twitter
+
+##########################################################################################
+### CONFIGURACION DE ARCHIVOS
+##########################################################################################
+
+# configuración de elementos del servidor
+include:
+ - _pages
+
+# homepage tiles
+tiles-source      : pages # accepts "posts" or "pages"
+pages-sources     : pages
+post-sources      : posts
+tiles-count       : 5
+
+##########################################################################################
+### CONFIGURACION DE ACCESO PAGINAS - LAYOUTS - SASS
+##########################################################################################
+# Defaults
+defaults:
+  # _pages
+  - scope:
+      permalink: /:path.html
+      type: pages
+    values:
+      layout: single
 
 # build settings
 markdown: kramdown

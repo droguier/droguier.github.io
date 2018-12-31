@@ -1,7 +1,7 @@
 ---
-title: Landing
+title: Test About-Me
 layout: landing
-permalink: /about-me/
+permalink: /about-me
 description: 'aún en construcción,<br/> estamos leyendo de apoco el codigó para sacar el mayor provecho posible.'
 image: assets/images/pic07.jpg
 nav-menu: true
