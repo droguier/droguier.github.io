@@ -27,9 +27,10 @@ body {
 .main-body {
 	float: left;
 	width: 100%;
-	background: url(../images/page-bg.jpg) no-repeat top center;
+	min-height: 100%;
+	background: url(../images/idiomas-2.jpg) no-repeat top center;
 	background-size: 100% auto;
-	background-attachment: fixed;
+	background-attachment: local;	
 }
 
 /* 
@@ -108,10 +109,10 @@ body {
 
 .block-keep-ratio {	position: relative; }
 	
-	.block-keep-ratio__content {
-		position: absolute;
-		top: 0; bottom: 0; right: 0; left: 0;
-	}
+.block-keep-ratio__content {
+	position: absolute;
+	top: 0; bottom: 0; right: 0; left: 0;
+}
 
 .block-keep-ratio:after {
 	display: block;
@@ -120,9 +121,14 @@ body {
 
 .block-width-full {	width: 100%; }
 .block-width-half { width: 150px; }
+.block-width-quarter { width: 75px; }
 
 .block-keep-ratio-1-1:after {	padding-top: 100%; }
 .block-keep-ratio-2-1:after {	padding-top: 50%; }
+.block-keep-ratio-half-1:after {
+	padding-top: 100%;
+	float: left !important;
+}
 
 .flexbox-center {
 	display: -webkit-box;
@@ -146,13 +152,36 @@ body {
 
 .home {
 	background-color: rgba(16, 165, 205, 0.8);
-	background-image: url(../images/menu-bg-home.png);
+	background-image: url(../images/home/basketball_hoop_cover_1.jpg);
 	background-repeat: no-repeat;
-	background-size: 100% 100%;
+	background-size: 425px 158px;
 }
 
 .about-main { padding-left: 0; }
-.about { background-color: rgba(193,61,18,0.8);	}
+.about { background-color: #ccc; }
+
+.nav-main {
+	padding-left: 0;
+	opacity: 0.85;
+}
+
+.nav-main-white {
+	padding-left: 0;
+	background-color: rgba(204, 204, 204, 0.25);
+	opacity: 0.85
+}
+
+.nav-main-celesteh {
+	padding-left: 0;
+	background-color: rgba(16, 165, 205, 0.25);
+	opacity: 0.85
+}
+
+.nav-main-red {
+	padding-left: 0;
+	background-color: rgba(255, 0, 0, 0.25);
+	opacity: 0.85
+}
 
 .cards {
 	display: -webkit-box;
@@ -174,7 +203,7 @@ body {
 	margin-bottom: 30px;
 }
 
-.contact { background-color: rgba(107,181,34,0.8);	}
+.contact { background-color: rgba(255, 56, 56, 0.80); opacity: 0.85	}
 
 .about i, .contact i {
 	float: left;
@@ -187,16 +216,35 @@ body {
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
-.banner-main-home {
-	background-color: white;
-	background-image: url(../images/banner-bg-home.jpg);
+
+/*BANNER SIMPLE*/
+.banner-simple {
+	background-color: rgba(200, 255, 250, 0.25);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: bottom right;
 	border-top: 7px solid #10a5cd;
-	min-height: 320px;	
+	min-height: 250px;
+	overflow-y: auto;
+	/*opacity: 0.85;*/
+}
+
+.banner-simple {
+	padding: 30px 30px 30px 50px;
+}
+/*BANNER SIMPLE END*/
+
+.banner-main-home {
+	background-color: white;
+	background-image: url(../images/scp_logopng.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom right;
+	border-top: 7px solid #10a5cd;
+	min-height: 320px;
 	overflow-y: auto;
 }
+
 .banner-main-home,
 .banner-main-about {
 	padding: 70px 30px 60px 50px;
@@ -222,6 +270,8 @@ body {
 	float: right;
 	margin: 45px 0px;
 }
+
+.carousel { min-height: 450px; }
 
 .carousel-control.left,
 .carousel-control.right {
@@ -787,7 +837,10 @@ textarea.form-control {	height:135px; }
 }
 
 @media (min-width: 1230px) {
-	.container { width: 1200px;	}
+	.container {
+		width: 1200px;
+		min-height: 1000px;
+	}
 }
 
 @media (max-width:991px) {

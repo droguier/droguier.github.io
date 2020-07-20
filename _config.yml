@@ -1,22 +1,29 @@
-
+###### CONFIG BASE
 title: Droguier's Web 4.0 # your title
-url: 'http://junlulocky.com'
+url: 'http://droguier.cl'
 #baseurl: '/online-cv' #change it according to your repository name
 baseurl: '/' #change it according to your repository name
 
-
-
 # Profile information
-yourname: Daniel Echoes Leiva  ## put your name
+owner: Daniel Echoes Leiva  ## put your name
 location: Santiago, Chile
 
+# jekyller 
 
-## Social Profiles
-facebook: http://www.facebook.com  ## your facebook account url
-twitter: http://www.twitter.com  ## your twitter account url
-linkedin: http://www.linkedin.com  ## your linkedin account url
-dribbble: http://www.dribble.com  ## you dribbble account url
-foursquare: http://www.foursquare.com  ## your foursquare account url
+##### SOCIAL Y MEDIAS 
+social:
+  twitter: http://www.twitter.com  ## your twitter account url
+  linkedin: http://www.linkedin.com  ## your linkedin account url
+#  dribbble: http://www.dribble.com  ## you dribbble account url
+#  foursquare: http://www.foursquare.com  ## your foursquare account url
+#  facebook: http://www.facebook.com  ## your facebook account url
+
+
+media:
+  audio: 
+    soundcloud: https://w.soundcloud.com/player/?url=https://soundcloud.com/echoelin/sets/tr4p05
+  imagenes:
+    
 
 
 
