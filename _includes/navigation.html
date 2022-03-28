@@ -1,67 +1,25 @@
-<aside class="main-navigation">
-    <div class="main-menu">
-
-        <div class="menu-container">
-            <div class="block-keep-ratio block-keep-ratio-2-1 block-width-full home">
-                <a href="index.html" class="block-keep-ratio__content  main-menu-link">
-                    <span class="main-menu-link-text">
-                        INICIO
-                    </span>
-                </a>
-            </div>
-        </div>
-
-        <div class="menu-container">
-            <div class="block-keep-ratio  block-keep-ratio-half-1  block-width-quarter pull-left nav-main-white">
-                <a href="https://www.gmail.com" class="main-menu-link block-keep-ratio__content flexbox-center">
-                    <img src="assets/images/logo_gmail_pixel.png" />
-                </a>
-            </div>
-            <div class="block-keep-ratio  block-keep-ratio-half-1  block-width-quarter pull-left nav-main-red">
-                <a href="https://www.youtube.com" class="main-menu-link block-keep-ratio__content flexbox-center">
-                    <img src="assets/images/youtube_logo_pixel.png" />
-                </a>
-            </div>
-            <div class="block-keep-ratio  block-keep-ratio-half-1  block-width-quarter pull-left nav-main-celesteh">
-                <a href="https://onedrive.live.com" class="main-menu-link block-keep-ratio__content flexbox-center">
-                    <img src="assets/images/cloud_icon_pixel.png" />
-                </a>
-            </div>
-            <div class="block-keep-ratio  block-keep-ratio-half-1  block-width-quarter pull-left nav-main-celesteh">
-                <a href="https://www.twitter.com" class="main-menu-link block-keep-ratio__content flexbox-center">
-                    <img src="assets/images/twitter_logo_pixel.png" />
-                </a>
-            </div>
-        </div>
-
-        <!-- sidebar carousel -->
-        <div class="menu-container">
-            <div class="mauris">
-                <div id="carousel-menu" class="carousel slide block-keep-ratio block-keep-ratio-md-2-1" data-ride="carousel">
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner" role="listbox">
-                        <div class="item active">
-                            <img src="assets/images/galery_science/scients_view.jpg" alt="slider">
-                        </div>
-                        <div class="item">
-                            <img src="assets/images/galery_science/math_arithmetic.jpg" alt="slider">
-                        </div>
-                        <div class="item">
-                            <img src="assets/images/home/tintin_barco.jpg" alt="slider">
-                        </div>
-                    </div>
-
-                    <!-- Controls -->
-                    <a class="left carousel-control" href="#carousel-menu" role="button" data-slide="prev">
-                        <span class="fa fa-caret-left" aria-hidden="true"></span>
-                        <span class="sr-only">Anterior</span>
-                    </a>
-                    <a class="right carousel-control" href="#carousel-menu" role="button" data-slide="next">
-                        <span class="fa fa-caret-right" aria-hidden="true"></span>
-                        <span class="sr-only">Siguiente</span>
-                    </a>
-                </div>
-            </div> <!-- .mauris -->
-        </div>
-    </div> <!-- main-menu -->
-</aside> <!-- main-navigation -->
+{% if site.data.navigation %}
+  <div class="navigation-wrapper">
+    <a href="#menu-toggle" id="menu-toggle">{{ site.data.text[site.locale].menu_label | default: 'Menu' }}</a>
+    <nav id="primary-nav" class="site-nav animated drop">
+      <ul>
+        {%- for link in site.data.navigation_home -%}
+          {%- if link.url contains '://' -%}
+            {%- assign url = link.url -%}
+          {%- else -%}
+            {%- assign url = link.url | relative_url -%}
+          {%- endif -%}
+          <li>
+            <a href="{{ url }}">
+              {%- if link.img == null -%} 
+                {{ link.title }}
+              {%- else -%}
+                <img src="{{ link.img }}" style="border-radius: 50%;width: 35px" >
+              {%- endif -%}
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </nav>
+  </div><!-- /.navigation-wrapper -->
+{% endif %}
