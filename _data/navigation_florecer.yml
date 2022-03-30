@@ -1,0 +1,15 @@
+# Sample site navigation bar links
+
+- title: Inicio
+  url: /florecerterapias
+  img: /assets/images/florecer/logo_florecer.jpg
+- title: Florecer Terapias
+  url: /florecerterapias
+- title: Post
+  url: /florecerterapias/publicaciones
+- title: Galeria
+  url: /florecerterapias/galeria
+- title: Servicios
+  url: /florecerterapias/serviciosporahora
+- title: Agenda
+  url: /florecerterapias/agenda

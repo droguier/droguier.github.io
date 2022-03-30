@@ -1,0 +1,18 @@
+# Sample site navigation bar links
+
+- title: Home
+  url: /  
+- title: Google
+  url: https://www.google.com/
+  img: /assets/images/droguier/logo_google.png
+- title: Youtube
+  url: https://www.youtube.com/
+  img: /assets/images/droguier/logo_youtube.png
+- title: OneDrive
+  url: https://www.onedrive.com/
+  img: /assets/images/droguier/logo_onedrive.png
+- title: Twitter
+  url: https://www.twitter.com/
+  img: /assets/images/droguier/logo_twitter.png
+# - title: External Page
+#   url: https://the-page.com/you-want-to-link-to.html
