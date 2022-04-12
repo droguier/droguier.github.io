@@ -19,7 +19,8 @@
 # in the templates via {{ site.myvariable }}.
 
 # Build settings
-theme: minima
+#theme: minima
+theme: jekyll-theme-so-simple
 
 title: un titulo del corteh
 email: your-email@gmail.com
