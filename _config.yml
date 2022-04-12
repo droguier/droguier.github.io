@@ -20,8 +20,8 @@
 
 # Build settings
 #theme: minima
-theme: jekyll-theme-so-simple
-#remote_theme: jekyll-theme-so-simple
+#theme: jekyll-theme-so-simple
+remote_theme: "mmistakes/so-simple-theme@3.2.0"
 
 title: un titulo del corteh
 email: your-email@gmail.com
