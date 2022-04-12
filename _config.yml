@@ -21,6 +21,7 @@
 # Build settings
 #theme: minima
 theme: jekyll-theme-so-simple
+#remote_theme: jekyll-theme-so-simple
 
 title: un titulo del corteh
 email: your-email@gmail.com
@@ -28,7 +29,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Don't disturb, aun haciendo cosas.
   
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://droguier.cl/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: echoes_daniel
 github_username:  droguier
 
