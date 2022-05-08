@@ -16,18 +16,18 @@
   
     
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Droguier’s Web v5.666 | Metalwork’s index since no JAVA idea from Jekyll</title>
+<title>Search | Droguier’s Web v5.666</title>
 <meta name="generator" content="Jekyll v4.2.2" />
-<meta property="og:title" content="Droguier’s Web v5.666" />
+<meta property="og:title" content="Search" />
 <meta property="og:locale" content="es_ES" />
 <meta name="description" content="Metalwork’s index since no JAVA idea from Jekyll" />
 <meta property="og:description" content="Metalwork’s index since no JAVA idea from Jekyll" />
 <meta property="og:site_name" content="Droguier’s Web v5.666" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Droguier’s Web v5.666" />
+<meta property="twitter:title" content="Search" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"Metalwork’s index since no JAVA idea from Jekyll","headline":"Droguier’s Web v5.666","name":"Droguier’s Web v5.666","url":"/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Metalwork’s index since no JAVA idea from Jekyll","headline":"Search","url":"/search/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -55,7 +55,7 @@
 </head>
 
 
-  <body class="layout--home  ">
+  <body class="layout--search  search">
     <nav class="skip-links">
   <h2 class="screen-reader-text">Saltar enlaces</h2>
   <ul>
@@ -86,7 +86,7 @@
     
     
       
-        <h1 class="site-title animated fadeIn"><a href="/">Droguier's Web v5.666</a></h1>
+        <div class="site-title animated fadeIn"><a href="/">Droguier's Web v5.666</a></div>
       
       <p class="site-description animated fadeIn" itemprop="description">Metalwork's index since no JAVA idea from Jekyll</p>
     
@@ -102,12 +102,18 @@
       <header class="page-header">
         
         
-          <h1 id="page-title" class="page-title"></h1>
+          <h1 id="page-title" class="page-title">Search</h1>
         
       </header>
       <div class="page-content">
         
 
+
+<form onsubmit="return false;">
+  <input type="input" id="search" class="search-input" placeholder="Ingrese su término de búsqueda ..." autofocus>
+</form>
+
+<div id="results"></div>
 
 
         
@@ -161,6 +167,68 @@ MathJax = {
 </script>
 
 <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+<script src="/assets/js/lunr/lunr.min.js"></script>
+  <script src="/assets/js/search-data.js"></script>
+  <script>
+    var idx = lunr(function () {
+      
+      // the, the normal lunr index initialization
+      this.field('title')
+      this.field('excerpt')
+      this.field('categories')
+      this.field('tags')
+      this.ref('id')
+
+      this.pipeline.remove(lunr.trimmer)
+
+      // add documents to index
+      for (var item in store) {
+        this.add({
+          title: store[item].title,
+          excerpt: store[item].excerpt,
+          categories: store[item].categories,
+          tags: store[item].tags,
+          id: item
+        })
+      }
+    });
+
+    console.log(jQuery.type(idx));
+
+    $(document).ready(function () {
+      $('input#search').on('keyup', function () {
+        var resultdiv = $('#results');
+        var query = $(this).val().toLowerCase();
+        var result =
+          idx.query(function (q) {
+            query.split(lunr.tokenizer.separator).forEach(function (term) {
+              q.term(term, { boost: 100 })
+              if (query.lastIndexOf(" ") != query.length - 1) {
+                q.term(term, { usePipeline: false, wildcard: lunr.Query.wildcard.TRAILING, boost: 10 })
+              }
+              if (term != "") {
+                q.term(term, { usePipeline: false, editDistance: 1, boost: 1 })
+              }
+            })
+          });
+        resultdiv.empty();
+        resultdiv.prepend('<p class="results__found">' + result.length + ' Resultado(s) encontrado(s)</p>');
+        for (var item in result) {
+          var ref = result[item].ref;
+          var searchitem =
+            '<article class="entry">' +
+              '<h3 class="entry-title">' +
+                '<a href="' + store[ref].url + '">' + store[ref].title + '</a>' +
+              '</h3>' +
+              '<div class="entry-excerpt">' +
+                '<p>' + store[ref].excerpt.split(" ").splice(0, 20).join(" ") + '...</p>' +
+              '</div>' +
+            '</article>';
+          resultdiv.append(searchitem);
+        }
+      });
+    });
+  </script>
 
   </body>
 

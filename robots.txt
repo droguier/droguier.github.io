@@ -1,1 +1,1 @@
-Sitemap: https://droguier.cl//sitemap.xml
+Sitemap: /sitemap.xml
