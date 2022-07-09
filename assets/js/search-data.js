@@ -1,6 +1,6 @@
 var store = [{
         "title": "Video: El universo en una copa de vino, por Richard Feynman",
-        "excerpt":"Hermoso poema que relaciona de una forma natural y simple porque las ciencias son necesarias para poder disfrutar un poquito más de las cosas simples   ","categories": ["Post Formats"],
+        "excerpt":"Hermoso poema que relaciona de una forma natural y simple porque las ciencias son necesarias para poder disfrutar un poquito más la vida A poet once said, “The whole universe is in a glass of wine”. We will probably never know in what sense he meant it for, but poets...","categories": ["Post Formats"],
         "tags": ["Post Formats"],
         "url": "https://droguier.cl/droguier/gallery-video-poem"
       },{
