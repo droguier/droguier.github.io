@@ -22,7 +22,7 @@ jobs:
     - uses: actions/checkout@v3
     - run: |
         npm install
-        npm run test:ci
+        npm test
 
   build:
     runs-on: ubuntu-latest
