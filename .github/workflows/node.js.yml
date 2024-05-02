@@ -24,7 +24,6 @@ jobs:
         npm install
         npm run all
         npm run test:ci
-      working-directory: './jokester'
 
   build:
     runs-on: ubuntu-latest
