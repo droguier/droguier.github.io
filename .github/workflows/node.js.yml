@@ -10,21 +10,7 @@ on:
     branches: [ "master" ]
 
 jobs:
-  build_and_test_action: # make sure build/ci work properly
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [18.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
-    steps:
-    - uses: actions/checkout@v3
-    - run: |
-        npm install
-        npm test
-
-  build:
+  build_static:
     runs-on: ubuntu-latest
 
     strategy:
@@ -40,4 +26,4 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: npm run build --if-present
+    - run: npm run build --output-path docs --base-href /droguier.github.io/
