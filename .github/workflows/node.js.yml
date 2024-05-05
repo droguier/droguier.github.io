@@ -31,7 +31,6 @@ jobs:
         cache: 'npm'
     - run:  git --version
     - run:  git config --global credential.https://github.com.username "droguier"
-    - run:  git config --global credential.https://github.com.password ${{ secrets.GITHUB_TOKEN }}
     - run: npm ci    
     - run: npm run build
     - run: npm run gitpage
