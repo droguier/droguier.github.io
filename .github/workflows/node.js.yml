@@ -30,7 +30,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     #- run:  git --version
-    - run:  git config --global credential.https://github.com.username "droguier"
+    - run:  git config --global credential.https://github.com.username ${{ secrets.STR_APELLIDO }}
     - run:  git config --global credential.https://github.com.password ${{ secrets.TOKEN_CUENTA }}
     - run: npm ci    
     - run: npm run build
