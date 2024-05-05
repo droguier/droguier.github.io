@@ -19,7 +19,8 @@
           "options": {
             "buildTarget": "droguier_cl:build:production",
             "name": "droguier",
-            "email": "echoes.daniel@gmail.com"
+            "email": "echoes.daniel@gmail.com",
+            "cname": "droguier.cl"
           }
         },      
         "build": {
