@@ -17,6 +17,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
+            "repo" : "https://github.com/droguier/droguier.github.io.git",
             "buildTarget": "droguier_cl:build:production",
             "name": "droguier",
             "email": "echoes.daniel@gmail.com",
