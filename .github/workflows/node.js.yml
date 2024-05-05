@@ -24,7 +24,7 @@ jobs:
     - name: Use Node.js ${{ matrix.node-version }}
       if: github.ref == 'refs/heads/master'
       env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN : ${{ secrets.GH_TOKEN }}
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
