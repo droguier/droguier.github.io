@@ -25,13 +25,14 @@ jobs:
       if: github.ref == 'refs/heads/master'
       env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          GH_ACCESS_TOKEN: ${{ secrets.GH_TOKEN }}
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: git config --global credential.https://github.com.username "droguier"
-    - run: git config --global credential.https://github.com.password $GH_ACCESS_TOKEN
+    - run:  |
+          git --version
+          git config --global credential.https://github.com.username "droguier"
+          git config --global credential.https://github.com.password $GITHUB_TOKEN
     - run: npm ci    
     - run: npm run build
     - run: npm run gitpage
