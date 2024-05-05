@@ -10,9 +10,6 @@ on:
   pull_request:
     branches: [ "master" ]
 
-env:
-  USR_MBY: Monday
-
 jobs:
   build_static:
     runs-on: ubuntu-latest
