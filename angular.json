@@ -13,7 +13,13 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
-      "architect": {
+      "architect": {        
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "buildTarget": "droguier_cl:build:production"
+          }
+        },      
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
