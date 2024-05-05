@@ -17,7 +17,9 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "buildTarget": "droguier_cl:build:production"
+            "buildTarget": "droguier_cl:build:production",
+            "name": "droguier",
+            "email": "echoes.daniel@gmail.com"
           }
         },      
         "build": {
