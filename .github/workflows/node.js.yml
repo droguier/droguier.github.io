@@ -28,4 +28,4 @@ jobs:
         cache: 'npm'
     - run: npm ci    
     - run: npm run build
-    - run: ng deploy --repo=https://github.com/droguier/droguier.github.io.git --name="droguier" --email=echoes.daniel@gmail.com
+    - run: npm run gitpage
