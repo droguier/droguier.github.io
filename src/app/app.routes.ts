@@ -1,15 +1,9 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HomeComponent } from './pages/home/home.component';
+import { CurriculumVitaeComponent } from './pages/curriculum-vitae/curriculum-vitae.component';
 
-export const routes: Routes = [];
-
-// const route_droguier : Routes = [];
-
-  
-// @NgModule({
-//     imports: [RouterModule.forRoot(route_droguier),
-//                 RouterModule.forRoot(routes)],
-//     exports: [RouterModule]
-// })
-
-// export class AppRoutingModule { }
+export const routes: Routes = [    
+        {  path: '', component: HomeComponent }  
+        , {  path: 'cv', component: CurriculumVitaeComponent }  
+    ];
