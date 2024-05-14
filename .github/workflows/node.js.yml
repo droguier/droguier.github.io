@@ -24,13 +24,14 @@ jobs:
     - name: Use Node.js ${{ matrix.node-version }}
       if: github.ref == 'refs/heads/master'
       env:
-          GH_TOKEN : ${{ secrets.TOKEN_CUENTA }}
+          GH_TOKEN    : ${{ secrets.TOKEN_CUENTA }}
+          GH_APELLIDO  : ${{ secrets.STR_APELLIDO }}
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     #- run:  git --version
-    - run:  git config --global credential.https://github.com.username ${{ secrets.STR_APELLIDO }}
+    - run:  git config --global credential.https://github.com.username $GH_APELLIDO
     - run:  git config --global credential.https://github.com.password ${{ secrets.TOKEN_CUENTA }}
     - run: npm ci    
     - run: npm run build
