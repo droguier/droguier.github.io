@@ -7,10 +7,9 @@ $size-mult: 1;
 
 footer{
     display: block;
-    position:absolute;
-    bottom:0px;
+    position: relative;
     width:90%;
-    right: 5%;
+    margin-left: 5%;
 }
 
 .site-footer {

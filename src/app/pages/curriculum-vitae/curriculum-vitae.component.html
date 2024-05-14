@@ -1,1 +1,84 @@
-<p>curriculum-vitae works!</p>
+
+
+    <h1><br>Curriculum Vitae</h1>
+   <mat-card>
+        <mat-card-header>
+            <mat-card-title-group>
+                <mat-card-title>{{ datos_curriculum.title }}</mat-card-title>
+                <mat-card-subtitle> {{ datos_curriculum.web }} </mat-card-subtitle>
+            </mat-card-title-group>
+        </mat-card-header>
+        <mat-card-content>
+            {{ datos_curriculum.short_desc }} 
+            <br><br>
+            <mat-form-field>
+                <mat-label>Celular</mat-label>
+                <input matInput [value]="datos_curriculum.phone_cell" readonly >     
+                <mat-icon matSuffix>phone</mat-icon>
+              </mat-form-field>
+        </mat-card-content>
+    </mat-card>
+
+    <h1><br>Interes</h1>
+    @for (interest of datos_curriculum.interest; track interest.title) {
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title-group>
+                    <mat-card-title> {{ interest.title }} </mat-card-title>
+                </mat-card-title-group>
+            </mat-card-header>
+            <mat-card-content>{{ interest.short_desc }} </mat-card-content>
+        </mat-card>
+    }
+
+    <h1><br>Educación</h1>
+    @for (education of datos_curriculum.education; track education.date_begin) {
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title-group>
+                    <mat-card-title> {{ education.title }} </mat-card-title>
+                    <mat-card-subtitle> {{ education.mention }} </mat-card-subtitle>
+                </mat-card-title-group>
+            </mat-card-header>
+            <mat-card-content>{{ education.short_desc }} 
+            <br><br>
+            <mat-form-field>
+                <mat-label>Fecha Inicio</mat-label>
+                <input matInput [matDatepicker]="date_begin" [value]="education.date_begin" readonly>            
+                <mat-datepicker #date_begin></mat-datepicker>           
+                <mat-icon matSuffix>calendar_month</mat-icon>
+            </mat-form-field>  
+            <mat-form-field>
+                <mat-label>Fecha Termino</mat-label>
+                <input matInput [matDatepicker]="date_end" [value]="education.date_end" readonly>    
+                <mat-datepicker #date_end></mat-datepicker>                 
+                <mat-icon matSuffix>calendar_month</mat-icon>
+            </mat-form-field>  </mat-card-content>
+        </mat-card>
+    }
+
+    <h1><br>Experiencia Laboral</h1>
+    @for (laboral_experience of datos_curriculum.laboral_experience; track laboral_experience.date_begin) {
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title-group>
+                    <mat-card-title> {{ laboral_experience.title }} </mat-card-title>
+                    <mat-card-subtitle> {{ laboral_experience.company }} </mat-card-subtitle>
+                </mat-card-title-group>
+            </mat-card-header>
+            <mat-card-content>{{ laboral_experience.desc }} 
+            <br><br>
+            <mat-form-field>
+                <mat-label>Fecha Inicio</mat-label>
+                <input matInput [matDatepicker]="date_begin"  [value]="laboral_experience.date_begin" readonly >            
+                <mat-datepicker #date_begin></mat-datepicker>           
+                <mat-icon matSuffix>calendar_month</mat-icon>
+            </mat-form-field>  
+            <mat-form-field>
+                <mat-label>Fecha Termino</mat-label>
+                <input matInput [matDatepicker]="date_end" [value]="laboral_experience.date_end" readonly>
+                <mat-datepicker #date_end></mat-datepicker>                 
+                <mat-icon matSuffix>calendar_month</mat-icon>
+            </mat-form-field>  </mat-card-content>
+        </mat-card>
+    }

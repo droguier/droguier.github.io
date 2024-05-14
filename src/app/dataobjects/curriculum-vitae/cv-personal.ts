@@ -43,6 +43,22 @@ export const DROGUIER_CV : CvForm =
             date_begin: new Date("2012-01-01"),
             date_end: new Date("2016-12-31")
         }
+        ,{ 
+            title: "KDD: Knowledge Discovery in Databases",
+            mention:"Otros estudios",
+            short_desc: "Estudios entorno a los sistemas de datos y metodologías de procesamientos de la información.",
+            establishment:"Universidad Tecnológica Metropolitana",
+            date_begin: new Date("2015-07-01"),
+            date_end: new Date("2015-12-31")
+        }
+        ,{ 
+            title: "Introducción a la Física Nuclear",
+            mention:"Otros estudios",
+            short_desc: "Estudios relacionados con las ciencias actuales enfocada a la física y el comportamiento de los átomos",
+            establishment:"Universidad Tecnológica Metropolitana",
+            date_begin: new Date("2016-01-01"),
+            date_end: new Date("2016-06-31")
+        }
     ],
     laboral_experience:[
         {
@@ -97,17 +113,17 @@ export const DROGUIER_CV : CvForm =
         }        
         ,{
             title: "Ingeniero de Software",
-            desc: "*.*",
+            desc: "Desarrollador en proyectos entorno a distintas plataformas y lenguajes de programación y bases de datos. Proyectos de desarrollo web en torno a C# ( .NET FrameWork v1.4.6) y MS SQL ",
             company: "Exynko, cambio organizacional a PENTA VIDA",
             relevant_client: "PENTA VIDA",
             date_begin: new Date("2019-04-01"),
-            date_end: new Date("2022-08-31")
+            date_end: new Date("2022-11-31")
         }
         ,{
             title: "Ingeniero de Software Senior",
-            desc: "*.*",
+            desc: "Desarrollador en proyectos entorno a distintas plataformas y lenguajes de programación y bases de datos. Proyectos de desarrollo web en torno a C# ( .NET FrameWork v1.4.6) y MS SQL ",
             company: "PENTA VIDA",
-            date_begin: new Date("2022-09-01")
+            date_begin: new Date("2022-12-01")
         }
     ]
 }
