@@ -36,4 +36,4 @@ jobs:
     # - run:  git config --global credential.https://github.com.password ${{ secrets.TOKEN_CUENTA }}
     - run: npm ci    
     - run: npm run build
-    - run: npm run gitpage
+    - run: npm run deploy
