@@ -8,4 +8,7 @@ export const environment = {
   app_title: "Droguier's Web " + version,
   app_description: "Droguier's Web | Web Personal, simple",
   app_footer_description: "Mi Web ver: v " + version + " | Droguier's Web",
+  //
+  formatDateFull: 'yyyy-MM-dd hh:mm:ss',
+  lenguajeFormat: 'en-US'
 };
